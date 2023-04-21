@@ -12,13 +12,21 @@ class RCOP_InfoToAdd: Module_F
 
 	class Attributes: AttributesBase
 	{
+		class RCOP_Params: Edit
+		{
+			property = "RCOP_Params";
+			displayName = "Parameters";
+			tooltip = $STR_RCOF_Modules_Params_tooltip;
+			typeName = "STRING";
+			defaultValue = "[{alive _x} count allPlayers]";
+		};
 		class RCOP_Info: Edit
 		{
 			property = "RCOP_Info";
 			displayName = "Information";
 			tooltip = $STR_RCOF_Modules_Info_tooltip;
 			typeName = "STRING";
-			defaultValue = "'The enemy commander is dead!'";
+			defaultValue = "'There are %1 players still alive.'";
 		};
 		class ModuleDescription: ModuleDescription{};
 	};
